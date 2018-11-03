@@ -1,0 +1,29 @@
+<div class="row">
+  <div class="col-md-10">
+  </div>
+  <div class="col-md-2">
+      <button type="button" class="btn btn-primary" data-ng-click="addFriends()"><i class="glyphicon glyphicon-plus"></i></button>  
+  </div>
+</div>
+<div class="row">
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Group</th>
+        <th>Image Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-ng-repeat="friend in friendsList">
+        <td>{{friend.name}}</td>
+        <td>{{friend.group}}</td>
+        <td>{{friend.imagePath}}</td>
+        <td>
+          <button type="button" class="btn btn-warning" data-ng-click="editFriends(friend)"><i class="glyphicon glyphicon-pencil"></i></button>
+          <button type="button" class="btn btn-danger" data-ng-click="deleteFriends(friend)"><i class="glyphicon glyphicon-trash"></i></button>
+        </td>
+      </tr>
+    </tbody>
+</table>
+</div>

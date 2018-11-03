@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="MyApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="../angular-ui-notification.min.css">
+</head>
+<body data-ng-controller="MainController">
+    
+
+
+    <!-- Navigation Bar -->
+    <div class="container-fluid">
+    <nav class="navbar navbar-inverse">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>                        
+            </button>
+            <a class="navbar-brand" href="#!/home">SSI Computer Education</a>
+          </div>
+          <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+              <li class="active"><a href="#!/home">Home</a></li>
+              <li class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown">Blog <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="#!/friends">Friends</a></li>
+                  <li><a href="#!/posts">Posts</a></li>
+                  <li><a href="#!/comments">Comments</a></li>
+                </ul>
+              </li>
+              <li><a href="#!/about">About</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+              <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+      <!--Navigation Bar ends -->
+
+
+
+      <div class="container">
+        <div ng-view></div>
+      </div>
+    
+    
+   
+
+    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="../angular.min.js"></script>
+    <script src="../angular-ui-notification.min.js"></script>
+    <script src="../angular-route.js"></script>
+    <script src="./module.js"></script>
+    <script src="./routes.js"></script>
+    <script src="./main.js"></script>
+    <script src="./shared/friends_service.js"></script>
+    <script src="./template/about/about.js"></script>
+    <script src="./template/home/home.js"></script>
+    <script src="./template/friends/friends.js"></script>
+    <script src="./template/friends/friends_add.js"></script>
+    <script src="./template/friends/friends_edit.js"></script>
+</body>
+</html>

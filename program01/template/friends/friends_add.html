@@ -1,0 +1,48 @@
+<div class="container">
+    <div class="row">
+        <div class="col-lg-12">
+            <form action="" name="friendsForm">
+                <div class="form-group" data-ng-class="{'has-error': !friendsForm.name.$pristine && friendsForm.name.$invalid, 'has-success':friendsForm.name.$valid}">
+                    <label class="control-label" for="name">Name *</label>
+                    <input id="name" name="name" type="text" class="form-control" autocomplete="off" placeholder="Name"
+                        data-ng-model="friends.name" data-ng-required="true" data-ng-minlength="3" />
+                    <div class="required" data-ng-show="!friendsForm.name.$pristine">
+                        <span data-ng-show="friendsForm.name.$error.required">Name is required</span>
+                        <span data-ng-show="friendsForm.name.$error.minlength">Name must be minimum 3 letters</span>
+                    </div>
+                </div>
+
+                <div class="form-group" data-ng-class="{'has-error': !friendsForm.group.$pristine && friendsForm.group.$invalid, 'has-success':friendsForm.group.$valid}">
+                        <label class="control-label" for="name">Group *</label>
+                        <input id="group" name="group" type="text" class="form-control" autocomplete="off" placeholder="Group"
+                            data-ng-model="friends.group" data-ng-required="true" />
+                        <div class="required" data-ng-show="!friendsForm.group.$pristine">
+                            <span data-ng-show="friendsForm.group.$error.required">Group is required</span>
+                        </div>
+                    </div>
+
+                    <div class="form-group" data-ng-class="{'has-error': !friendsForm.imagePath.$pristine && friendsForm.imagePath.$invalid, 'has-success':friendsForm.imagePath.$valid}">
+                            <label class="control-label" for="name">Image Path *</label>
+                            <input id="imagePath" name="imagePath" type="text" class="form-control" autocomplete="off" placeholder="Image Path"
+                                data-ng-model="friends.imagePath" data-ng-required="true" />
+                            <div class="required" data-ng-show="!friendsForm.imagePath.$pristine">
+                                <span data-ng-show="friendsForm.imagePath.$error.required">Group is required</span>
+                            </div>
+                        </div>
+
+
+                        <div class="row">
+                            <div class="col-md-10">
+
+                            </div>
+                            <div class="col-md-2">
+                                    <input type="button" value="Submit" class="btn btn-primary" data-ng-click="submitForm()" data-ng-disabled="friendsForm.$invalid" />
+                                    <input type="button" value="Cancel" class="btn btn-default" data-ng-click="cancelForm()" />                
+                            </div>
+                        </div>
+                
+
+            </form>
+        </div>
+    </div>
+</div>

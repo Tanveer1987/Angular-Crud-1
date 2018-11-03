@@ -1,0 +1,11 @@
+<div class="row">
+    <div class="col-lg-3 mt20" data-ng-repeat="friend in friendsList">
+        <div class="card">
+        <img data-ng-src="{{friend.imagePath}}" alt="Avatar" style="width:100%">
+        <div class="card-container">
+            <h4><b data-ng-bind="friend.name"></b></h4>
+            <p data-ng-bind="friend.group"></p>
+        </div>
+        </div>
+    </div>
+</div>
